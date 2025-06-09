@@ -1,3 +1,3 @@
-module github.com/gadhittana01/go-argo-cd
+module go-argo-cd
 
-go 1.24.4
+go 1.21
