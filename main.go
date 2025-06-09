@@ -9,7 +9,7 @@ import (
 func healthCheck(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
-	fmt.Fprint(w, `{"status": "okay"}`)
+	fmt.Fprint(w, `{"status": "okay giri putra adhittana"}`)
 }
 
 func main() {
