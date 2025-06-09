@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: go-app
-        image: gadhittana01/go-argo-cd:4702d96ed381e5c6e83821c4d21393c9f2b44e32
+        image: gadhittana01/go-argo-cd:c14e6df84fb9d647fcaac663df6aecfcf6fa7c16
         ports:
         - containerPort: 8080
         envFrom:
