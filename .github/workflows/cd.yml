@@ -31,8 +31,12 @@ jobs:
 
     - name: Update deployment
       run: |
-        # Update image in deployment.yaml
-        sed -i "s|image: go-app:latest|image: ${{ secrets.DOCKER_USERNAME }}/go-argo-cd:${{ github.sha }}|g" k8s/deployment.yaml
+        # Update image in deployment.yaml - more flexible pattern
+        sed -i "s|image: .*|image: ${{ secrets.DOCKER_USERNAME }}/go-argo-cd:${{ github.sha }}|g" k8s/deployment.yaml
+        
+        # Verify the change
+        echo "Updated deployment.yaml:"
+        grep "image:" k8s/deployment.yaml
         
         # Commit and push
         git config user.name "github-actions[bot]"
